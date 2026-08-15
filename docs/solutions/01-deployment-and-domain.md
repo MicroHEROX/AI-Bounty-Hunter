@@ -56,7 +56,7 @@ committed.
 From a mainland-China network:
 
 ```text
-nslookup bounty-hunter.bounty-hunter.workers.dev
+nslookup your-worker.your-subdomain.workers.dev
 → Addresses: 2a03:2880:f10c:83:face:b00c:0:25de   (Facebook IPv6 range)
              103.39.76.66                          (not Cloudflare)
 ```
