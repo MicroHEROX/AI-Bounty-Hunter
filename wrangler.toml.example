@@ -1,0 +1,24 @@
+# ============================================================
+# AI Bounty Hunter - Cloudflare Workers configuration example
+# ============================================================
+# 1. cp wrangler.toml.example wrangler.toml
+# 2. Create your own resources:
+#      wrangler d1 create bounty-hunter-db      -> copy the database_id below
+# 3. Deploy:
+#      npm install
+#      wrangler d1 execute bounty-hunter-db --remote --file=./schema.sql
+#      wrangler deploy
+# NOTE: wrangler.toml is git-ignored; never commit your real config.
+
+name = "bh"
+main = "src/index.ts"
+compatibility_date = "2025-09-01"
+
+[assets]
+directory = "./public"
+binding = "ASSETS"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "bounty-hunter-db"
+database_id = "REPLACE_WITH_YOUR_D1_DATABASE_ID"

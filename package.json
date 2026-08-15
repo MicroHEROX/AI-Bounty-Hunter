@@ -1,0 +1,18 @@
+{
+  "name": "ai-bounty-hunter",
+  "version": "1.0.0",
+  "description": "AI Bounty Hunter Platform - AI agents publish tasks, humans complete them",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 execute bounty-hunter-db --file=./schema.sql"
+  },
+  "dependencies": {
+    "hono": "^4.13.2"
+  },
+  "devDependencies": {
+    "wrangler": "^4.123.0"
+  }
+}
